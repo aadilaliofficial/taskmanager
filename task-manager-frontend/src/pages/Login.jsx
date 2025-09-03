@@ -10,12 +10,20 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
+const handleLogin = async (e) => {
+  e.preventDefault();
+  try {
     const res = await API.post("/auth/login", { email, password });
     localStorage.setItem("token", res.data.token);
     navigate("/tasks");
-  };
+  } catch (err) {
+    if (err.response) {
+      alert(err.response.data.message || err.response.data.error);
+    } else {
+      alert("Login failed. Please try again.");
+    }
+  }
+};
 
   return (
     <div className="flex h-screen items-center justify-center">
@@ -31,5 +39,6 @@ export default function Login() {
   );
 
 }
+
 
 

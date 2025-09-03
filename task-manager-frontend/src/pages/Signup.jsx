@@ -27,6 +27,12 @@ const handleSignup = async (e) => {
 
   return (
     <div className="flex h-screen items-center justify-center">
+      <button
+        onClick={() => navigate("/signup")}
+        className="absolute top-4 right-4 bg-blue-500 text-white px-4 py-2 rounded"
+      >
+        Sign Up
+      </button>
       <form onSubmit={handleSignup} className="bg-white p-6 rounded shadow w-80 space-y-3">
         <h2 className="text-xl font-bold">Sign Up</h2>
         <input type="email" placeholder="Email" className="w-full border p-2"
@@ -39,6 +45,7 @@ const handleSignup = async (e) => {
   );
 
 }
+
 
 
 

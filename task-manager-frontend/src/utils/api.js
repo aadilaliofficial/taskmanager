@@ -3,7 +3,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://taskmanager-6zba.onrender.com/api/auth", 
+  baseURL: "https://taskmanager-6zba.onrender.com", 
 });
 
 // attach token automatically
@@ -15,6 +15,7 @@ API.interceptors.request.use((req) => {
 
 
 export default API;
+
 
 
 

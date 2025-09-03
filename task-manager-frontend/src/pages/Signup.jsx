@@ -10,11 +10,20 @@ export default function Signup() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSignup = async (e) => {
-    e.preventDefault();
+const handleSignup = async (e) => {
+  e.preventDefault();
+  try {
     await API.post("/auth/signup", { email, password });
+    alert("Signup successful! Please login.");
     navigate("/login");
-  };
+  } catch (err) {
+    if (err.response) {
+      alert(err.response.data.message || err.response.data.error);
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  }
+};
 
   return (
     <div className="flex h-screen items-center justify-center">
@@ -30,5 +39,6 @@ export default function Signup() {
   );
 
 }
+
 
 

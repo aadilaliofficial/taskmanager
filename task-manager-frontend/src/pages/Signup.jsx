@@ -29,7 +29,7 @@ const handleSignup = async (e) => {
     <div className="flex h-screen items-center justify-center">
       <button
         onClick={() => navigate("/login")}
-        className="absolute top-4 right-4 bg-blue-500 text-white px-4 py-2 rounded"
+        className="absolute top-4 right-4 bg-green-500 text-white px-4 py-2 rounded"
       >
 Log In
       </button>
@@ -45,6 +45,7 @@ Log In
   );
 
 }
+
 
 
 

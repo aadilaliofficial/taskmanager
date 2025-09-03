@@ -26,7 +26,7 @@ export default function Login() {
     <div className="flex h-screen items-center justify-center relative">
       {/* Top-right Signup Button */}
       <button
-        onClick={() => navigate("/signup")}
+        onClick={() => navigate("/")}
         className="absolute top-4 right-4 bg-blue-500 text-white px-4 py-2 rounded"
       >
         Sign Up
@@ -58,3 +58,4 @@ export default function Login() {
     </div>
   );
 }
+

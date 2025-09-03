@@ -12,7 +12,7 @@ export default function Signup() {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    await API.post("api/auth/signup", { email, password });
+    await API.post("/api/auth/signup", { email, password });
     navigate("/login");
   };
 
@@ -30,3 +30,4 @@ export default function Signup() {
   );
 
 }
+

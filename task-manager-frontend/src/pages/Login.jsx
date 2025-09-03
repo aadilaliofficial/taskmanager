@@ -36,11 +36,12 @@ const handleLogin = async (e) => {
         <button className="bg-green-500 text-white px-4 py-2 rounded w-full">Login</button>
       </form>
 
-      <button onClick={https://taskmanager-five-chi.vercel.app/}>  </button>
+      <button onClick={https://taskmanager-five-chi.vercel.app/}> Signup </button>
     </div>
   );
 
 }
+
 
 
 
